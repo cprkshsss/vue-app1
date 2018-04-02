@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue App 1</title>
+</head>
+<body>
+<div id="hello-world-app">
+  <h1>{{ msg }}</h1>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js"></script>
+<script>
+	new Vue({
+		el: "#hello-world-app",
+		data(){
+			return {
+				msg: "Hello World!"
+			}
+		}
+	}); 
+</script>
+</body>
+</html>
+
+<!-- 
+********* Step by step code breakdown ******************************************************************************
+1. First we have a basic HTML boilerplate file.
+2. A div with an id of #hello-world-app will contain our app.
+3. In the div, we have an h1 and a reference to an msg piece of data.
+4. We call for the minified Vue.js library that’s hosted on cdnjs. 2.1.6 is the latest version as of this writing.
+5. We then instantiate a new Vue object and tell it with el that our app is the #hello-world-app div.
+6. Finally, we provide the data needed with the data object. In this case, we provide the data for msg.
+*********************************************************************************************************************
+-->
